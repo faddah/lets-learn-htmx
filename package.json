@@ -1,0 +1,19 @@
+{
+  "name": "lets-learn-htmx",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev --host",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.0.8",
+    "astro-htmx": "^1.0.5",
+    "htmx.org": "^1.9.10",
+    "typescript": "^5.3.3"
+  }
+}
