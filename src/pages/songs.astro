@@ -1,9 +1,23 @@
 ---
-export const partial = true;
+import type { Code } from "astro:components";
+import { getAlbum } from "../lib/spotify";
+
+let albums = [];
+if (Astro.request.method === "POST") {
+  const data = await Astro.request.formData();
+
+  const q = data.get("q") as string;
+
+  albums = await getAlbum(q);
+}
+
+export const partial: boolean = true;
 ---
 
 <div>
   <h1 style="color: navy; font-size: 48px; margin: 5%; text-align: center;">
     Faddah's Music
   </h1>
+  <p>You searched for:</p>
+  <pre>{JSON.stringify(albums, null, 2)}</pre>
 </div>
