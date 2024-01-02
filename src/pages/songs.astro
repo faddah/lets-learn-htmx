@@ -1,15 +1,15 @@
 ---
 import type { Code } from "astro:components";
-import { getAlbum } from "../lib/spotify";
+import { getAlbums } from "../lib/spotify";
 import type { any } from "astro/zod";
 
-let albums: Array = [];
+let albums = [];
 if (Astro.request.method === "POST") {
   const data = await Astro.request.formData();
 
   const q = data.get("q") as string;
 
-  albums = await getAlbum(q);
+  albums = await getAlbums(q);
 }
 
 export const partial: boolean = true;
