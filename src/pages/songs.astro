@@ -1,8 +1,9 @@
 ---
 import type { Code } from "astro:components";
 import { getAlbum } from "../lib/spotify";
+import type { any } from "astro/zod";
 
-let albums = [];
+let albums: Array = [];
 if (Astro.request.method === "POST") {
   const data = await Astro.request.formData();
 
