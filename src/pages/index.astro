@@ -18,7 +18,7 @@
         <input type="search" id="search-iinput" name="q" />
       </label>
     </form>
-    <button hx-get="/songs" hx-target="#search-results">Load Music</button>
+    <button hx-post="/songs" hx-target="#search-results"> Load Music</button>
   </body>
 </html>
 <div id="search-results"></div>
