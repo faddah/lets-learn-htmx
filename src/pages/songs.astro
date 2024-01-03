@@ -6,10 +6,13 @@ import type { any } from "astro/zod";
 let albums = [];
 if (Astro.request.method === "POST") {
   const data = await Astro.request.formData();
+  console.log(`data const value is: ${data}.`);
 
   const q = data.get("q") as string;
+  console.log(`q const value is: ${q}.`);
 
   albums = await getAlbums(q);
+  console.log(`albums let array value is: ${albums}`);
 }
 
 export const partial: boolean = true;
