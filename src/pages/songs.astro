@@ -1,7 +1,6 @@
 ---
 import type { Code } from "astro:components";
 import { getAlbums } from "../lib/spotify";
-import type { any } from "astro/zod";
 
 let albums = [];
 if (Astro.request.method === "POST") {
